@@ -59,7 +59,7 @@ class Jobs extends Component {
     this.setState({ apistatus: apistatusconstants.progress })
     const jwtToken = Cookies.get('token')
     const employequery = employementtype.join(',')
-    const apiUrl = `https://sravanthibackend-4.onrender.com/jobs?employment_type=${employequery}&minimum_package=${salaryrange}&search=${searchinput}`
+    const apiUrl = `https://sravanthibackend-5.onrender.com/jobs?employment_type=${employequery}&minimum_package=${salaryrange}&search=${searchinput}`
 
     const options = {
       method: 'GET',
