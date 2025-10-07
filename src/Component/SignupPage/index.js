@@ -19,7 +19,7 @@ class SignupPage extends Component {
     const { name, username, password } = this.state;
 
     try {
-      const response = await fetch('http://localhost:5000/users/register', {
+      const response = await fetch('https://sravanthibackend-4.onrender.com/users/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

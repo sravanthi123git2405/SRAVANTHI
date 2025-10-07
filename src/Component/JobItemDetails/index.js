@@ -30,7 +30,7 @@ class JobItemDetails extends Component {
     this.setState({ apistatus: apistatusconstants.progress })
     const { id } = this.props.params
     const jwtToken = Cookies.get('token')
-    const apiurl = `http://localhost:5000/jobs/${id}`
+    const apiurl = `https://sravanthibackend-4.onrender.com/jobs/${id}`
     const options = {
       method: 'GET',
       headers: {

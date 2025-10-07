@@ -20,7 +20,7 @@ class ProfileComponent extends Component {
     this.setState({ apistatus: apiconstants.inprogress });
 
     try {
-      const url = 'http://localhost:5000/users/profile';
+      const url = 'https://sravanthibackend-4.onrender.com/users/profile';
       const options = {
         method: 'GET',
         credentials: 'include', // send cookie automatically
