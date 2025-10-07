@@ -38,6 +38,59 @@
   border-width: 0px;
   height: 30px;
   margin-left: 40px;
-  margin-top: 25px;
   cursor: pointer;
+}
+/* --- Mobile View --- */
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 100vw;
+    height: 60px;
+    margin-left: 0;
+  }
+
+  .unordered-lists {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #272727;
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+    display: none; /* hidden by default */
+  }
+
+  .unordered-lists.active {
+    display: flex; /* shown when menu opened */
+  }
+
+  .unordered-lists li {
+    margin: 15px 0;
+  }
+
+  .btn-logout {
+    display: none; /* hide logout on main navbar */
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    margin-right: 50px;
+  }
+
+  /* hide menu button on desktop */
+  .hamburger.hide {
+    display: none;
+  }
+}
+
+/* --- Desktop Only --- */
+@media screen and (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
 }

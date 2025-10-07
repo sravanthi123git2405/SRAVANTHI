@@ -40,3 +40,39 @@
 .one {
   color: white;
 }
+/* --- Mobile View --- */
+@media screen and (max-width: 768px) {
+  .home-background {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/home-sm-bg.png'); /* smaller image for mobile */
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .home-card {
+    margin: 20px;
+    position: static; /* so it scrolls naturally on small screens */
+    text-align: center;
+    padding-top: 50px; /* add some spacing from top */
+  }
+
+  .home-head {
+    font-size: 35px; /* smaller heading */
+    line-height: 1.2;
+  }
+
+  .home-para {
+    font-size: 16px; /* smaller paragraph */
+    line-height: 1.4;
+  }
+
+  .find-job-btn {
+    width: 120px; /* slightly bigger for mobile */
+    height: 40px;
+    font-size: 14px;
+    margin-top: 20px;
+    display:flex;
+    align-self: center; 
+    padding-top: 10px; 
+    padding-left: 30px;
+  }
+}

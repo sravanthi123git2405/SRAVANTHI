@@ -1,13 +1,20 @@
+import {useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import Cookies from 'js-cookie'
+import {FaBars, FaTimes} from 'react-icons/fa'
 import './index.css'
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
   const navigate = useNavigate()
 
   const onClickLogout = () => {
     Cookies.remove('jwt_token')
     navigate('/login', {replace: true})
+  }
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
   }
 
   return (
@@ -20,20 +27,28 @@ const Header = () => {
         />
       </Link>
 
-      <ul className="unordered-lists">
+      {/* Hamburger Icon */}
+      <div className="hamburger" onClick={toggleMenu}>
+        {isOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      {/* Nav Links */}
+      <ul className={`unordered-lists ${isOpen ? 'active' : ''}`}>
         <li>
-          <Link className="home-text" to="/home">Home</Link>
+          <Link className="home-text" to="/home" onClick={() => setIsOpen(false)}>Home</Link>
         </li>
         <li>
-          <Link className="home-text" to="/jobs">Jobs</Link>
-        </li> 
-       <li><Link to="/applied-jobs" className="home-text">Applied Jobs</Link></li> 
-
+          <Link className="home-text" to="/jobs" onClick={() => setIsOpen(false)}>Jobs</Link>
+        </li>
+        <li>
+          <Link className="home-text" to="/applied-jobs" onClick={() => setIsOpen(false)}>Applied Jobs</Link>
+        </li>
+        <li>
+          <button className="btn-logout" onClick={onClickLogout}>
+            Logout
+          </button>
+        </li>
       </ul>
-
-      <button className="btn-logout" onClick={onClickLogout}>
-        Logout
-      </button>
     </nav>
   )
 }

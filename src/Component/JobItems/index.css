@@ -104,3 +104,49 @@
   color: #d1d1d1;
   line-height: 1.5;
 }
+.card-list {
+    padding: 16px;
+  }
+
+  .logo-head-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .image-logo {
+    width: 50px;
+    height: 50px;
+    margin: 0 0 8px 0;
+  }
+
+  .heading-card .title {
+    font-size: 14px;
+  }
+
+  .rating-card {
+    margin-top: 4px;
+  }
+
+  .second-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .insdide-second {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .lpa-card {
+    font-size: 13px;
+  }
+
+  .description-head {
+    font-size: 14px;
+  }
+
+  .description-card {
+    font-size: 13px;
+  }
